@@ -2,19 +2,23 @@
 
 require_once('action.php');
 
-function addStudent($newdb){
-    $insertion=$newdb->prepare("INSERT INTO student VALUES (NULL,:firstname,:lastname,:email,
-                                       :birth,:phone_number,:year_guess,:speciality_guess,NULL,:sexe,
+
+function addStudent($newdb,$lastId){
+    $insertion=$newdb->prepare("INSERT INTO student (student_id,student_fname,student_lname,student_mail,
+                                        student_dateofbirth,student__phonenumber,student_annee,student_speciality,
+                                        address_id,student_gender,student_status) VALUES (NULL,:firstname,:lastname,:email,
+                                       :birth,:phone_number,:year_guess,:speciality_guess,:lastId,:sexe,
                                        :student_status)");
-            $insertion->bindValue(":firstname",$_POST["firstname"]);
-            $insertion->bindValue(":lastname",$_POST["lastname"]);
-            $insertion->bindValue(":email",$_POST["email"]);
-            $insertion->bindValue(":birth",$_POST["birth"]);
-            $insertion->bindValue(":phone_number",$_POST["phone_number"]);
-            $insertion->bindValue(":year_guess",$_POST["year_guess"]);
-            $insertion->bindValue(":speciality_guess",$_POST["speciality_guess"]);
-            $insertion->bindValue(":sexe",$_POST["sexe"]);
-            $insertion->bindValue(":student_status",$_POST["student_status"]);
+            $insertion->bindValue("firstname",$_POST["firstname"]);
+            $insertion->bindValue("lastname",$_POST["lastname"]);
+            $insertion->bindValue("email",$_POST["email"]);
+            $insertion->bindValue("birth",$_POST["birth"]);
+            $insertion->bindValue("phone_number",$_POST["phone_number"]);
+            $insertion->bindValue("year_guess",$_POST["year_guess"]);
+            $insertion->bindValue("speciality_guess",$_POST["speciality_guess"]);
+            $insertion->bindValue("sexe",$_POST["sexe"]);
+            $insertion->bindValue("student_status",$_POST["student_status"]);
+            $insertion->bindValue("lastId",$lastId);
         $verification= $insertion->execute();
             if ($verification){
                 echo "Insertion réussie";
@@ -40,4 +44,5 @@ function addAdress($newdb){
             else {
                 echo "Echec de l'insertion";
             }
+            return $newdb->lastInsertId();
 }

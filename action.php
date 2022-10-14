@@ -29,8 +29,10 @@ $db = "annuaire_nws";
       isset($_POST["year_guess"])&&
       isset($_POST["sexe"])&&
       isset($_POST["student_status"])){
-            addAdress($newdb);
+         $last = addAdress($newdb);
+            addStudent($newdb,$last);
       }
+
 
 
 
