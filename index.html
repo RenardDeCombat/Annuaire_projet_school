@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,16 +16,16 @@
                 <form method="post" action="action.php">
                     <input type="text" id="fname" name="firstname" placeholder="Your name..">
                     <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                    <input type="text" id="mail" name="email" placeholder="Your name..">
-                    <input type="text" id="date_of_birth" name="birth" placeholder="Your name..">
-                    <input type="text" id="phone" name="phone_number" placeholder="Your last name..">
-                    <input type="text" id="street" name="address_street" placeholder="Your name..">
+                    <input type="text" id="mail" name="email" placeholder="mail">
+                    <input type="text" id="date_of_birth" name="birth" placeholder="date de naissance">
+                    <input type="text" id="phone" name="phone_number" placeholder="numéro de téléphone">
+                    <input type="text" id="street" name="address_street" placeholder="rue">
                     <select id="city" name="address_city">
                         <option value="australia">Australia</option>
                         <option value="canada">Canada</option>
                         <option value="usa">USA</option>
                     </select>
-                    <input type="text" id="postal_code" name="address_postal_code" placeholder="Your last name..">
+                    <input type="text" id="postal_code" name="address_postal_code" placeholder="code postal">
                     <select id="country" name="address_country">
                         <option value="australia">Australia</option>
                         <option value="canada">Canada</option>
@@ -41,6 +41,17 @@
                         <option value="canada">Canada</option>
                         <option value="usa">USA</option>
                     </select>
+                    <select id="gender" name="sexe">
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                    </select>
+                    <select id="status" name="student_status">
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                    </select>
+                    <input type="submit" value="Ajouter un l'étudiant">
                 </form>
             </div>
         </div>

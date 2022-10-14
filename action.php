@@ -1,6 +1,8 @@
 <?php
 
 
+require_once('function.php');
+
 $host = "localhost";
 $username = "root";
 $password = "";
@@ -24,12 +26,11 @@ $db = "annuaire_nws";
       isset($_POST["address_postal_code"])&&
       isset($_POST["address_country"])&&
       isset($_POST["speciality_guess"])&&
-      isset($_POST["year_guess"])){
-            $insertion=$newdb->prepare("INSERT INTO student VALUES (NULL,:firstname,:lastname,:email,:phone_number,:)")
+      isset($_POST["year_guess"])&&
+      isset($_POST["sexe"])&&
+      isset($_POST["student_status"])){
+            addAdress($newdb);
       }
-
-
-
 
 
 
