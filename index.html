@@ -10,54 +10,55 @@
 </head>
 <body>
     <div class="mv1380-max">
-        <div class="gauche">
-            <h1>Ajout d'un contact élève</h1>
-            <div class="formulaire">
-                <form method="post" action="action.php">
-                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                    <input type="text" id="mail" name="email" placeholder="mail">
-                    <input type="text" id="date_of_birth" name="birth" placeholder="date de naissance">
-                    <input type="text" id="phone" name="phone_number" placeholder="numéro de téléphone">
-                    <input type="text" id="street" name="address_street" placeholder="rue">
-                    <select id="city" name="address_city">
-                        <option value="australia">Australia</option>
-                        <option value="canada">Canada</option>
-                        <option value="usa">USA</option>
-                    </select>
-                    <input type="text" id="postal_code" name="address_postal_code" placeholder="code postal">
-                    <select id="country" name="address_country">
-                        <option value="australia">Australia</option>
-                        <option value="canada">Canada</option>
-                        <option value="usa">USA</option>
-                    </select>
-                    <select id="speciality" name="speciality_guess">
-                        <option value="1">Australia</option>
-                        <option value="2">Canada</option>
-                        <option value="3">USA</option>
-                    </select>
-                    <select id="year" name="year_guess">
-                        <option value="1">A1</option>
-                        <option value="2">A2</option>
-                        <option value="3">A3</option>
-                    </select>
-                    <select id="gender" name="sexe">
-                        <option value="1">Australia</option>
-                        <option value="2">Canada</option>
-                    </select>
-                    <select id="status" name="student_status">
-                        <option value="1">Australia</option>
-                        <option value="2">Canada</option>
-                        <option value="3">USA</option>
-                    </select>
-                    <input type="submit" value="Ajouter un l'étudiant">
-                </form>
+        <div class="content">
+            <div class="gauche">
+                <h1>Ajout d'un contact élève</h1>
+                <div class="formulaire">
+                    <form method="post" action="action.php">
+                            <input class="texte" type="text" id="lname" name="lastname" placeholder="Your last name..">
+                            <input class="texte" type="text" id="fname" name="firstname" placeholder="Your name..">
+                            <input class="texte" type="text" id="mail" name="email" placeholder="mail">
+                            <input class="texte" type="text" id="date_of_birth" name="birth" placeholder="date de naissance">
+                            <input class="texte" type="text" id="phone" name="phone_number" placeholder="numéro de téléphone">
+                            <input class="texte" type="text" id="street" name="address_street" placeholder="rue">
+                            <select class="choix-multiple" id="city" name="address_city">
+                                <option value="australia">Australia</option>
+                                <option value="canada">Canada</option>
+                                <option value="usa">USA</option>
+                            </select>
+                            <input class="texte"  type="text" id="postal_code" name="address_postal_code" placeholder="code postal">
+                            <select class="choix-multiple" id="country" name="address_country">
+                                <option value="australia">Australia</option>
+                                <option value="canada">Canada</option>
+                                <option value="usa">USA</option>
+                            </select>
+                            <select class="choix-multiple" id="speciality" name="speciality_guess">
+                                <option value="1">Australia</option>
+                                <option value="2">Canada</option>
+                                <option value="3">USA</option>
+                            </select>
+                            <select class="choix-multiple" id="year" name="year_guess">
+                                <option value="1">A1</option>
+                                <option value="2">A2</option>
+                                <option value="3">A3</option>
+                            </select>
+                            <select class="choix-multiple" id="gender" name="sexe">
+                                <option value="1">Australia</option>
+                                <option value="2">Canada</option>
+                            </select>
+                            <select class="choix-multiple" id="status" name="student_status">
+                                <option value="1">Australia</option>
+                                <option value="2">Canada</option>
+                                <option value="3">USA</option>
+                            </select>
+                            <input class="envoyer" class="envoyer" type="submit" value="Ajouter un l'étudiant">
+                    </form>
+                </div>
+            </div>
+            <div class="droite">
+
             </div>
         </div>
-        <div class="droite">
-
-        </div>
-        
     </div>
 </body>
 </html>
