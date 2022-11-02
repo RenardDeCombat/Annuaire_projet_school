@@ -15,41 +15,48 @@
                 <h1>Ajout d'un contact élève</h1>
                 <div class="formulaire">
                     <form method="post" action="action.php">
-                            <input class="texte" type="text" id="lname" name="lastname" placeholder="Your last name..">
-                            <input class="texte" type="text" id="fname" name="firstname" placeholder="Your name..">
-                            <input class="texte" type="text" id="mail" name="email" placeholder="mail">
-                            <input class="texte" type="text" id="date_of_birth" name="birth" placeholder="date de naissance">
-                            <input class="texte" type="text" id="phone" name="phone_number" placeholder="numéro de téléphone">
-                            <input class="texte" type="text" id="street" name="address_street" placeholder="rue">
+                            <input class="texte" type="text" id="lname" name="lastname" placeholder="Prénom">
+                            <input class="texte" type="text" id="fname" name="firstname" placeholder="Nom">
+                            <input class="texte" type="text" id="mail" name="email" placeholder="Adresse mail">
+                            <input class="texte" type="text" id="date_of_birth" name="birth" placeholder="Date de naissance">
+                            <input class="texte" type="text" id="phone" name="phone_number" placeholder="Numéro de téléphone">
+                            <input class="texte" type="text" id="street" name="address_street" placeholder="Rue">
                             <select class="choix-multiple" id="city" name="address_city">
+                                <option value="rien" disabled selected value hidden id="none">...</option>
                                 <option value="australia">Australia</option>
                                 <option value="canada">Canada</option>
                                 <option value="usa">USA</option>
                             </select>
-                            <input class="texte"  type="text" id="postal_code" name="address_postal_code" placeholder="code postal">
+                            <input class="texte"  type="text" id="postal_code" name="address_postal_code" placeholder="Code postal">
                             <select class="choix-multiple" id="country" name="address_country">
-                                <option value="australia">Australia</option>
-                                <option value="canada">Canada</option>
-                                <option value="usa">USA</option>
+                                <option value="rien" disabled selected value hidden id="none">...</option>
+                                <option value="france">France</option>
+                                <option value="autre">Autre...</option>
                             </select>
                             <select class="choix-multiple" id="speciality" name="speciality_guess">
-                                <option value="1">Australia</option>
-                                <option value="2">Canada</option>
-                                <option value="3">USA</option>
+                                <option value="0" disabled selected value hidden id="none">...</option>
+                                <option value="1">Développement</option>
+                                <option value="2">E-business</option>
+                                <option value="3">S2M</option>
+                                <option value="4">Communication graphique</option>
+                                <option value="5">Je ne sais pas</option>
                             </select>
                             <select class="choix-multiple" id="year" name="year_guess">
+                                <option value="0" disabled selected value hidden id="none">...</option>
                                 <option value="1">A1</option>
                                 <option value="2">A2</option>
                                 <option value="3">A3</option>
+                                <option value="4">Je ne sais pas</option>
                             </select>
                             <select class="choix-multiple" id="gender" name="sexe">
-                                <option value="1">Australia</option>
-                                <option value="2">Canada</option>
+                                <option value="0" disabled selected value hidden id="none">...</option>
+                                <option value="1">Homme</option>
+                                <option value="2">Femme</option>
                             </select>
                             <select class="choix-multiple" id="status" name="student_status">
-                                <option value="1">Australia</option>
-                                <option value="2">Canada</option>
-                                <option value="3">USA</option>
+                                <option value="0" disabled selected value hidden id="none">...</option>
+                                <option value="1">En Alternance</option>
+                                <option value="2">Sans Alternance</option>
                             </select>
                             <input class="envoyer" class="envoyer" type="submit" value="Ajouter un l'étudiant">
                     </form>
@@ -59,6 +66,11 @@
 
             </div>
         </div>
+    </div>
+    <div class="nav">
+        <button class="bouton_admin">
+            <a href="admin.php">Interface utilisateur</a>
+        </button>
     </div>
 </body>
 </html>

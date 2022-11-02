@@ -97,3 +97,9 @@ h3 {
     text-align: center;
 }
 
+
+.bouton_admin {
+    padding: 10px;
+    margin-left: 70%;
+    margin-top: 5vh;
+}
