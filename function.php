@@ -8,7 +8,7 @@ function addStudent($newdb){
     $insertion=$newdb->prepare("INSERT INTO `student` (student_id,student_fname,student_lname,student_mail,
                                         student_dateofbirth,student_phonenumber,address_street,
                                         address_country,address_postal_code,address_city,student_annee,student_speciality,
-                                        ,student_gender,student_status) VALUES (NULL,:firstname,:lastname,:email,
+                                        student_gender,student_status) VALUES (NULL,:firstname,:lastname,:email,
                                        :birth,:phone_number,:address_street,:address_country,:address_postal_code,
                                        :address_city,:year_guess,:speciality_guess,:sexe,:student_status)");
             $insertion->bindValue(":firstname",$_POST["firstname"]);
