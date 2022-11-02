@@ -46,4 +46,4 @@ class Student {
 }
 
 
-$student = new Student()
+$student = new Student();

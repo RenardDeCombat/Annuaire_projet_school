@@ -21,20 +21,11 @@
                             <input class="texte" type="text" id="date_of_birth" name="birth" placeholder="Date de naissance">
                             <input class="texte" type="text" id="phone" name="phone_number" placeholder="Numéro de téléphone">
                             <input class="texte" type="text" id="street" name="address_street" placeholder="Rue">
-                            <select class="choix-multiple" id="city" name="address_city">
-                                <option value="rien" disabled selected value hidden id="none">...</option>
-                                <option value="australia">Australia</option>
-                                <option value="canada">Canada</option>
-                                <option value="usa">USA</option>
-                            </select>
-                            <input class="texte"  type="text" id="postal_code" name="address_postal_code" placeholder="Code postal">
-                            <select class="choix-multiple" id="country" name="address_country">
-                                <option value="rien" disabled selected value hidden id="none">...</option>
-                                <option value="france">France</option>
-                                <option value="autre">Autre...</option>
-                            </select>
+                            <input class="texte" type="text" id="city" name="address_city" placeholder="Ville">
+                            <input class="texte" type="text" id="postal_code" name="address_postal_code" placeholder="Code postal">
+                            <input class="texte" type="text" id="country" name="address_country" placeholder="Pays">
                             <select class="choix-multiple" id="speciality" name="speciality_guess">
-                                <option value="0" disabled selected value hidden id="none">...</option>
+                                <option value="0" disabled selected value hidden id="none">Votre spécialité ...</option>
                                 <option value="1">Développement</option>
                                 <option value="2">E-business</option>
                                 <option value="3">S2M</option>
@@ -42,23 +33,23 @@
                                 <option value="5">Je ne sais pas</option>
                             </select>
                             <select class="choix-multiple" id="year" name="year_guess">
-                                <option value="0" disabled selected value hidden id="none">...</option>
+                                <option value="0" disabled selected value hidden id="none">Votre année d'entrée ...</option>
                                 <option value="1">A1</option>
                                 <option value="2">A2</option>
                                 <option value="3">A3</option>
                                 <option value="4">Je ne sais pas</option>
                             </select>
                             <select class="choix-multiple" id="gender" name="sexe">
-                                <option value="0" disabled selected value hidden id="none">...</option>
+                                <option value="0" disabled selected value hidden id="none">Votre genre ...</option>
                                 <option value="1">Homme</option>
                                 <option value="2">Femme</option>
                             </select>
                             <select class="choix-multiple" id="status" name="student_status">
-                                <option value="0" disabled selected value hidden id="none">...</option>
+                                <option value="0" disabled selected value hidden id="none">Votre statut ...</option>
                                 <option value="1">En Alternance</option>
                                 <option value="2">Sans Alternance</option>
                             </select>
-                            <input class="envoyer" class="envoyer" type="submit" value="Ajouter un l'étudiant">
+                            <input onclick="window.location.href='admin.php';" class="envoyer" class="envoyer" type="submit" value="Ajouter un l'étudiant">
                     </form>
                 </div>
             </div>

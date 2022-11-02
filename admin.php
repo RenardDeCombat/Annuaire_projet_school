@@ -32,7 +32,7 @@
         <td width = 7%><strong>Statut</strong></td>
     </tr>
 
-    
+
 
 <?php
 
@@ -42,6 +42,13 @@ require_once('function.php');
 try {
     foreach ($newdb->query('SELECT * FROM `student`') as $row) {
         $row = array_map("utf8_encode", $row);
+
+        if(isset($_GET['delete_id'])){
+            $delete=$_GET['delete_id'];
+            $delData="DELETE FROM student WHERE student_id = $delete";
+            $newdb->prepare($delData)->execute(); 
+            header("Location:admin.php");
+        }
 
         $id = $row ['student_id'];
         $firstName = $row['student_fname'];
@@ -75,9 +82,19 @@ try {
         <td>$speciality</td>
         <td>$gender</td>
         <td>$status</td>
-
         ";
+        // if ($valid == 0) {
+        //    echo "<td>Non<a href='gestion.php?id_valid=".$id."' id='update'>&nbsp&nbsp&nbspCliquez pour valider</a></td>";
+        // }
+
+        // else {
+        //     echo "<td>Oui<a href='gestion.php?id_annul=".$id."' id='update'>&nbsp&nbsp&nbspCliquez pour annuler</a></td>";
+        // }
+        echo "<td><a href='admin.php?delete_id=".$id."' id='delete'>Supprimer</a></td>";
+        echo "<td><a href='update.php?id=".$id."'>Edit</a></td>
+        </tr>";
     }
+    
 }
 catch(PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
@@ -86,8 +103,10 @@ catch(PDOException $e) {
 
 ?>
 
+</table>
+
     <div class="nav">
         <button class="bouton_admin">
-            <a href="index.html">Interface utilisateur</a>
+            <a href="index.html">Ajouter un étudiant</a>
         </button>
     </div>
