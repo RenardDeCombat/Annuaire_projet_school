@@ -16,7 +16,7 @@
 <h1 class=titre>Gestions des étudiants</h1>
 <table>
     <tr>
-        <td scope="row"><strong>ID</strong></td>
+        <td width = 2% scope="row"><strong>ID</strong></td>
         <td width = 7%><strong>Prénom</strong></td>
         <td width = 7%><strong>Nom</strong></td>
         <td width = 7%><strong>Email</strong></td>
@@ -38,17 +38,11 @@
 
 require_once('database.php');
 require_once('function.php');
+require_once('delete.php');
 
 try {
     foreach ($newdb->query('SELECT * FROM `student`') as $row) {
         $row = array_map("utf8_encode", $row);
-
-        if(isset($_GET['delete_id'])){
-            $delete=$_GET['delete_id'];
-            $delData="DELETE FROM student WHERE student_id = $delete";
-            $newdb->prepare($delData)->execute(); 
-            header("Location:admin.php");
-        }
 
         $id = $row ['student_id'];
         $firstName = $row['student_fname'];
