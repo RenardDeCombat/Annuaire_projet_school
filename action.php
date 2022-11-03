@@ -2,20 +2,9 @@
 
 
 require_once('function.php');
+require_once('database.php');
 
-$host = "localhost";
-$username = "root";
-$password = "";
-$db = "annuaire_nws";
 
-   try {
-      $newdb = new PDO("mysql:host=$host;dbname=$db", $username, $password);
-      echo "Connected successfully";
-      
-   } catch(PDOException $e) {
-      echo "Connection failed: " . $e->getMessage();
-      die;
-   }
    if (isset($_POST["firstname"])&&
       isset($_POST["lastname"])&&
       isset($_POST["email"])&&
@@ -25,12 +14,11 @@ $db = "annuaire_nws";
       isset($_POST["address_city"])&&
       isset($_POST["address_postal_code"])&&
       isset($_POST["address_country"])&&
-      isset($_POST["speciality_guess"])&&
       isset($_POST["year_guess"])&&
+      isset($_POST["speciality_guess"])&&
       isset($_POST["sexe"])&&
       isset($_POST["student_status"])){
-         $last = addAdress($newdb);
-            addStudent($newdb,$last);
+            addStudent($newdb);
       }
 
 
