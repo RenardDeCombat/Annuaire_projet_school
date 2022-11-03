@@ -1,16 +1,8 @@
 <?php
 
-$host = "localhost";
-$username = "root";
-$password = "";
-$db = "annuaire_nws2";
-
-   try {
-      $newdb = new PDO("mysql:host=$host;dbname=$db", $username, $password);
-      
-   } catch(PDOException $e) {
-      echo "Connection failed: " . $e->getMessage();
-      die;
-   }
+$json = "connect.json";
+$extractJson = file_get_contents($json);
+$decodeData = json_decode($extractJson);
+$newdb = new PDO("mysql:host=".$decodeData->server.";dbname=".$decodeData->db,$decodeData->username,$decodeData->password);
 
 ?>
